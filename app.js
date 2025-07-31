@@ -7,6 +7,9 @@ const apiEndpoint = "https://wizard-world-api.herokuapp.com/elixirs";
 async function getData(url) {
   try {
     const result = await fetch(url);
+    console.log(url);
+    renderInfo(data);
+
     if (!result.ok) {
       throw new Error(`status code: ${result.status}`);
     }
@@ -20,5 +23,12 @@ async function getData(url) {
 getData(apiEndpoint);
 
 // Renders element to page
+function renderInfo(data) {
+  data.name.forEach((element) => {
+    const nameTitle = document.createElement("p");
+    nameTitle.textContent = element.name;
+    display.append(nameTitle);
+  });
+}
 
 // Eventlisteners
