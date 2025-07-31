@@ -1,4 +1,5 @@
 // Define constants
+const displayInfo = document.querySelector("#display");
 
 const apiEndpoint = "https://wizard-world-api.herokuapp.com/elixirs";
 
