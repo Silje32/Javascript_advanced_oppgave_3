@@ -24,7 +24,7 @@ getData(apiEndpoint);
 
 // Renders element to page
 function renderInfo(data) {
-  data.name.forEach((element) => {
+  data.forEach((element) => {
     const nameTitle = document.createElement("p");
     nameTitle.textContent = element.name;
     display.append(nameTitle);
