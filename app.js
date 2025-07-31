@@ -27,7 +27,7 @@ function renderInfo(data) {
   data.forEach((element) => {
     const nameTitle = document.createElement("p");
     nameTitle.textContent = element.name;
-    display.append(nameTitle);
+    displayInfo.append(nameTitle);
   });
 }
 
