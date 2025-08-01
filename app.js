@@ -32,7 +32,7 @@ function renderInfo(data) {
     displayInfo.append(nameTitle);
     // Eventlistener for modal
     nameTitle.addEventListener("click", () => {
-      getData(`${apiEndpoint}/${element.id}`);
+      getData(`${apiEndpoint}`);
     });
   });
 }
