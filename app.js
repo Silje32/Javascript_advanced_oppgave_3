@@ -36,4 +36,18 @@ function renderInfo(data) {
   });
 }
 
+function displayEffect(data) {
+  const modal = document.createElement("dialog");
+  modal.classList.add("modal");
+  const nameTitle = document.createElement("h2");
+  nameTitle.textContent = data.title;
+
+  const displayEffect = document.createElement("p");
+  displayEffect.textContent = data.effect;
+
+  modal.append(nameTitle, displayEffect);
+  document.body.append(modal);
+  // Built-in function
+  modal.showModal();
+}
 // Eventlisteners
