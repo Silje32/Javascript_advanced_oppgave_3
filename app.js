@@ -50,5 +50,11 @@ function displayEffect(data) {
   document.body.append(modal);
   // Built-in function
   modal.showModal();
+  // Close modal
+  const closeModal = () => {
+    modal.close();
+    document.body.removeEventListener("click", closeModal);
+  };
+  // When we click somewhere on the page the modal closes
+  document.body.addEventListener("click", closeModal);
 }
-// Eventlisteners
