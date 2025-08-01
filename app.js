@@ -12,6 +12,7 @@ async function getData(url) {
     console.log(data);
 
     renderInfo(data);
+    displayEffect(data);
 
     if (!result.ok) {
       throw new Error(`status code: ${result.status}`);
