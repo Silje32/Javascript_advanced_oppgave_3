@@ -29,6 +29,9 @@ function renderInfo(data) {
     const nameTitle = document.createElement("p");
     nameTitle.textContent = element.name;
     displayInfo.append(nameTitle);
+    nameTitle.addEventListener("click", () => {
+      console.log(element.id);
+    });
   });
 }
 
